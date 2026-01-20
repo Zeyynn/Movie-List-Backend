@@ -1,0 +1,20 @@
+createMovie(
+  name: String!
+  description: String
+  release_year: Int
+  rating: Float
+  director_id: ID!
+  genre_id: ID!
+): Movie @create
+
+updateMovie(
+  id: ID! @eq
+  name: String
+  description: String
+  release_year: Int
+  rating: Float
+  director_id: ID
+  genre_id: ID
+): Movie @update
+
+deleteMovie(id: ID! @eq): Movie @delete

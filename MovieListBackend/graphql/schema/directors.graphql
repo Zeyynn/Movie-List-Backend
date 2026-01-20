@@ -11,10 +11,3 @@ type Query {
   director(id: ID! @eq): Director @find
 }
 
-type Mutation {
-  createDirector(
-    name: String!
-    biography: String
-    birth_date: String
-  ): Director @create
-}

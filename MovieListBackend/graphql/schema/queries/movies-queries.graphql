@@ -1,0 +1,2 @@
+movies: [Movie!]! @all
+movie(id: ID! @eq): Movie @find

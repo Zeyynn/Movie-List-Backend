@@ -8,9 +8,3 @@ type Query {
   genres: [Genre!]! @all
   genre(id: ID! @eq): Genre @find
 }
-
-type Mutation {
-  createGenre(
-    name: String!
-  ): Genre @create
-}

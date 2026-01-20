@@ -1,0 +1,5 @@
+createDirector(
+  name: String!
+  biography: String
+  birth_date: String
+): Director @create

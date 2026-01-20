@@ -1,0 +1,3 @@
+createGenre(
+  name: String!
+): Genre @create
