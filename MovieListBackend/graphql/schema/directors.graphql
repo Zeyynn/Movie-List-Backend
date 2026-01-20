@@ -1,0 +1,20 @@
+type Director {
+  id: ID!
+  name: String!
+  biography: String
+  birth_date: String
+  movies: [Movie!]! @hasMany
+}
+
+type Query {
+  directors: [Director!]! @all
+  director(id: ID! @eq): Director @find
+}
+
+type Mutation {
+  createDirector(
+    name: String!
+    biography: String
+    birth_date: String
+  ): Director @create
+}
