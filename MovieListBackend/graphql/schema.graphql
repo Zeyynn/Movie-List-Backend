@@ -1,0 +1,37 @@
+type Movie {
+  id: ID!
+  name: String!
+  description: String
+  release_year: Int
+  genre: String
+  director: String
+  rating: Float
+}
+
+type Query {
+  movies: [Movie!]! @all
+  movie(id: ID! @eq): Movie @find
+}
+
+type Mutation {
+  createMovie(
+    name: String!
+    description: String
+    release_year: Int
+    genre: String
+    director: String
+    rating: Float
+  ): Movie @create
+
+  updateMovie(
+    id: ID! @eq
+    name: String
+    description: String
+    release_year: Int
+    genre: String
+    director: String
+    rating: Float
+  ): Movie @update
+
+  deleteMovie(id: ID! @eq): Movie @delete
+}
