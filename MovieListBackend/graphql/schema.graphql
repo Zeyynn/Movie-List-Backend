@@ -1,11 +1,9 @@
-# import types
 #import schema/movies.graphql
 #import schema/directors.graphql
 #import schema/genres.graphql
 
 # Query
 type Query {
-  # import all query fields
   #import schema/queries/movies-queries.graphql
   #import schema/queries/directors-queries.graphql
   #import schema/queries/genres-queries.graphql
@@ -13,7 +11,6 @@ type Query {
 
 # Mutation
 type Mutation {
-  # import all mutation fields
   #import schema/mutations/movies-mutations.graphql
   #import schema/mutations/directors-mutations.graphql
   #import schema/mutations/genres-mutations.graphql
